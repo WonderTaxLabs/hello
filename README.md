@@ -1,1 +1,1 @@
-this a **public-facing** GitHub Pages site.
+CAUTION: this a **public-facing** and **publically-accessible** GitHub Pages site.
