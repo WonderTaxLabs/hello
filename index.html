@@ -21,12 +21,27 @@
         font-weight: 400;
         font-style: normal;
       }
+      h1 sup {
+        font-size: .5em;
+      }
+      .brand {
+        height: 200px;
+        width: 200px;
+        transition: all 0.5s ease-out allow-discrete;
+        transition: 200ms linear 50ms;
+      }
+      @media screen and (min-width: 600px) {
+        .brand {
+          height: 300px;
+          width: 300px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="content">
       <div>
-        <img src="https://hello.wonder.tax/favicon.png" title="WonderTax&reg; Labs" height="100" width="100"/>
+        <img class="brand" src="https://hello.wonder.tax/favicon.png" title="WonderTax&reg; Labs"/>
       </div>
       <div>
         <h1>WonderTax<sup>&reg;</sup> Labs</h1>
