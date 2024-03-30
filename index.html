@@ -34,7 +34,7 @@
         color: var(--honeydew);
       }
       .content  {
-        position: absolute;
+        position: relative;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -107,10 +107,10 @@
       .card {
         cursor: default;
         background-color: var(--snow);
-        border-radius: var(--radius-2);
-        box-shadow: var(--shadow-2);
+        border-radius: var(--radius-3);
+        box-shadow: var(--shadow-3);
         &:hover {
-          box-shadow: var(--shadow-3);
+          box-shadow: var(--shadow-5);
         }
         @media (--motionOK) {
           animation: var(--animation-fade-in);
@@ -135,6 +135,24 @@
         }
       }
 
+      /* Portrait */
+      @media screen and (orientation:portrait) {
+          /* Portrait styles */
+      }
+      /* Landscape */
+      @media screen and (orientation:landscape) {
+          /* Landscape styles */
+          .content  {
+            position: relative;
+            top: 100;
+            left: 50%;
+            transform: translate(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+      }
     </style>
     <script type="application/ld+json">
       {
