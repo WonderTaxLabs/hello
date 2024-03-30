@@ -14,6 +14,7 @@
         --asparagus: #669647ff;
         --jet: #323335ff;
         --honeydew: #D1E1D3ff;
+        --snow: #f7f0f0ff;
         --sunglow: #ffc857ff;
       }
 
@@ -43,6 +44,7 @@
         font-family: roc-grotesk-wide, sans-serif;
         font-weight: 600;
         font-style: normal;
+        font-size: 1.3em;
       }
       h1 sup {
         font-size: .5em;
@@ -53,10 +55,31 @@
         transition: all 0.5s ease-out allow-discrete;
         transition: 200ms linear 50ms;
       }
-      @media screen and (min-width: 600px) and (height >= 350) {
+      @media screen and (min-width: 700px){
+        .brand {
+          height: 250px;
+          width: 250px;
+        }
+        h1{
+          font-size: 2em;
+        }
+      }
+      @media screen and (min-width: 1064px){
         .brand {
           height: 300px;
           width: 300px;
+        }
+        h1{
+          font-size: 3em;
+        }
+      }
+      @media screen and (min-width: 1400px){
+        .brand {
+          height: 350px;
+          width: 350px;
+        }
+        h1{
+          font-size: 4em;
         }
       }
     </style>
@@ -73,7 +96,7 @@
   <body>
     <div class="content">
       <div>
-        <img class="brand" src="https://hello.wonder.tax/favicon.png" title="WonderTax&reg; Labs"/>
+        <img class="brand" src="https://hello.wonder.tax/favicon.png" title="WonderTax&reg;&nbsp;Labs"/>
       </div>
       <div>
         <h1>WonderTax<sup>&reg;</sup> Labs</h1>
