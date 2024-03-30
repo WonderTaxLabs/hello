@@ -29,6 +29,10 @@
         color: var(--jet);
         font-family: stix-two-text, serif;
       }
+      fieldset{
+        margin:.5em;
+        border-radius: var(--radius-3);
+      }
       .dark-light{
         background-color: var(--jet);
         color: var(--honeydew);
@@ -108,12 +112,11 @@
         cursor: default;
         background-color: var(--snow);
         border-radius: var(--radius-3);
-        box-shadow: var(--shadow-3);
+        box-shadow: var(--shadow-1);
+        animation: var(--animation-fade-in);
+        transition: 0.3s;
         &:hover {
-          box-shadow: var(--shadow-5);
-        }
-        @media (--motionOK) {
-          animation: var(--animation-fade-in);
+          box-shadow: var(--shadow-3);
         }
       }
 
@@ -173,28 +176,33 @@
         <h1>WonderTax<sup>&reg;</sup> Labs</h1>
       </div>
       <div class="card">
-        I am --snow.
+        I am a card in --snow.
       </div>
       <div class="dark-light">
-        I am --jet.
+        just a div in --jet.
       </div>
       <fieldset>
         <label style="font-family: roc-grotesk-wide, sans-serif;">Brand Specification (Adobe Font: Roc Grotesk Wide)</label>
+        <br/>
+        body font-family: <a href="https://fonts.adobe.com/fonts/stix" target="_blank">stix-two-text</a>
         <div class="a-row">
-          <div style="background-color: var(--sgbus-green);" title="--sgbus-green">#7EED47</div>
-          <div style="background-color: var(--asparagus);color: var(--snow);" title="--asparagus">#669647</div>
-          <div style="background-color: var(--jet);color: var(--snow);" title="--jet">#323335</div>
-          <div style="background-color: var(--honeydew);" title="--honeydew">#D1E1D3</div>
+          <div style="background-color: var(--sgbus-green);" title="--sgbus-green">#7EED47 --sgbus-green</div>
+          <div style="background-color: var(--asparagus);color: var(--snow);" title="--asparagus">#669647 --asparagus</div>
+          <div style="background-color: var(--jet);color: var(--snow);" title="--jet">#323335 --jet</div>
+          <div style="background-color: var(--honeydew);border: 1px solid #66964740" title="--honeydew">#D1E1D3 --honeydew</div>
         </div>
       </fieldset>
-      <div class="a-row">
-        <div style="background-color: var(--sunglow);" title="#ffc857">--sunglow</div>
-        <div style="background-color: var(--lavender);" title="#d8e4ff">--lavender</div>
-        <div style="background-color: var(--non-photo-blue);" title="#A3E7FC">--non-photo-blue</div>
-        <div style="background-color: var(--maya-blue);" title="#78C3FB">--maya-blue</div>
-        <div style="background-color: var(--chefchaouen-blue);" title="#5386E4">--chefchaouen-blue</div>
-        <div style="background-color: var(--periwinkle);" title="#B4ADEA">--periwinkle</div>
-      </div>
+      <fieldset>
+        <label>Accent/Action color candidates (so far)</label>
+        <div class="a-row">
+          <div style="background-color: var(--sunglow);" title="#FFC857">#FFC857 --sunglow</div>
+          <div style="background-color: var(--lavender);" title="#D8E4FF">#D8E4FF --lavender</div>
+          <div style="background-color: var(--non-photo-blue);" title="#A3E7FC">#A3E7FC --non-photo-blue</div>
+          <div style="background-color: var(--maya-blue);" title="#78C3FB">#78C3FB --maya-blue</div>
+          <div style="background-color: var(--chefchaouen-blue);" title="#5386E4">#5386E--chefchaouen-blue</div>
+          <div style="background-color: var(--periwinkle);" title="#B4ADEA">#B4ADEA --periwinkle</div>
+        </div>
+      </fieldset>
     </div>
   </body>
 </html>
