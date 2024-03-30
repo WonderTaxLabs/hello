@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="https://hello.wonder.tax/favicon.png"/>
     <link rel="stylesheet" href="https://use.typekit.net/wxd6mxf.css"/>
     <style>
+      @import "https://unpkg.com/open-props";
       :root {
         --sgbus-green: #7eed47ff;
         --asparagus: #669647ff;
@@ -16,19 +17,21 @@
         --honeydew: #D1E1D3ff;
         --snow: #f7f0f0ff;
         --sunglow: #ffc857ff;
+        /* accent options */
+        --lavender: #d8e4ffff;
+        --non-photo-blue: #A3E7FCff;
+        --maya-blue: #78C3FBff;
+        --chefchaouen-blue: #5386E4ff;
+        --periwinkle: #B4ADEAff;
       }
-
-
       body {
         background-color: var(--honeydew);
         color: var(--jet);
+        font-family: stix-two-text, serif;
       }
-
-      @media (prefers-color-scheme: dark){
-        body{
-          background-color: var(--jet);
-          color: var(--honeydew);
-        }
+      .dark-light{
+        background-color: var(--jet);
+        color: var(--honeydew);
       }
       .content  {
         position: absolute;
@@ -39,6 +42,18 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+      }
+      .a-row{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-around;
+      }
+      div {
+        margin:1em;
+        border-radius: var(--radius-2);
+        min-width:200px;
+        text-align: center;
       }
       h1  {
         font-family: roc-grotesk-wide, sans-serif;
@@ -82,6 +97,44 @@
           font-size: 4em;
         }
       }
+      
+      /*
+      tmep card style
+      via https://open-props.style/#getting-started
+      @import "https://unpkg.com/open-props";
+      */
+      .card {
+        cursor: default;
+        background-color: var(--snow);
+        border-radius: var(--radius-2);
+        padding: var(--size-fluid-3);
+        box-shadow: var(--shadow-2);
+        &:hover {
+          box-shadow: var(--shadow-3);
+        }
+        @media (--motionOK) {
+          animation: var(--animation-fade-in);
+        }
+      }
+
+      @media (prefers-color-scheme: dark){
+        body{
+          background-color: var(--jet);
+          color: var(--honeydew);
+        }
+        .dark-light{
+          background-color: var(--honeydew);
+          color: var(--jet);
+        }
+        .card{
+          background-color: #000000;
+          color: var(--snow);
+        }
+        .a-row div{
+          color: var(--jet);
+        }
+      }
+
     </style>
     <script type="application/ld+json">
       {
@@ -100,6 +153,20 @@
       </div>
       <div>
         <h1>WonderTax<sup>&reg;</sup> Labs</h1>
+      </div>
+      <div class="card">
+        I am --snow.
+      </div>
+      <div class="dark-light">
+        I am --jet.
+      </div>
+      <div class="a-row">
+        <div style="background-color: var(--sunglow);">--sunglow</div>
+        <div style="background-color: var(--lavender);">--lavender</div>
+        <div style="background-color: var(--non-photo-blue);">--non-photo-blue</div>
+        <div style="background-color: var(--maya-blue);">--maya-blue</div>
+        <div style="background-color: var(--chefchaouen-blue);">--chefchaouen-blue</div>
+        <div style="background-color: var(--periwinkle);">--periwinkle</div>
       </div>
     </div>
   </body>
