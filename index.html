@@ -29,10 +29,29 @@
         color: var(--jet);
         font-family: stix-two-text, serif;
       }
+      a{
+        color: var(--asparagus);
+        text-decoration: none;
+      }
       fieldset{
         margin:.5em;
         border-radius: var(--radius-3);
       }
+      
+      /* Hover Animations class*/
+      .grow { 
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3 ease-in-out;
+        font-size: 1em; 
+        line-height: 1em;
+      }
+
+      .grow:hover { 
+        font-size: 1.1em;
+        line-height: 0.9em;
+      }
+      /* End Hover Animations class*/
+
       .dark-light{
         background-color: var(--jet);
         color: var(--honeydew);
@@ -125,6 +144,9 @@
           background-color: var(--jet);
           color: var(--honeydew);
         }
+        a{
+          color: var(--sgbus-green);
+        }
         .dark-light{
           background-color: var(--honeydew);
           color: var(--jet);
@@ -205,9 +227,9 @@
         just a div in --jet.
       </div>
       <fieldset>
-        <label style="font-family: roc-grotesk-wide, sans-serif;">Brand Specification (Adobe Font: Roc Grotesk Wide)</label>
+        <label style="font-family: roc-grotesk-wide, sans-serif;">Brand Specification (Adobe Font: <a href="https://fonts.adobe.com/fonts/roc-grotesk" class="grow" target="_blank">Roc Grotesk Wide</a>)</label>
         <br/>
-        body font-family: <a href="https://fonts.adobe.com/fonts/stix" target="_blank">stix-two-text</a>
+        body font-family: <a href="https://fonts.adobe.com/fonts/stix" class="grow" target="_blank">stix-two-text</a>
         <div class="a-row">
           <div style="background-color: var(--sgbus-green);" title="--sgbus-green">#7EED47 --sgbus-green</div>
           <div style="background-color: var(--asparagus);color: var(--snow);" title="--asparagus">#669647 --asparagus</div>
