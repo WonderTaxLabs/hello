@@ -16,7 +16,7 @@
   "scope": "https://hello.wonder.tax",
   "short_name": "WonderTaxLabs",
   "start_url": "https://hello.wonder.tax",
-  "theme_color": "#7eed47",
+  "theme_color": "#323335",
   "icons": [
     {
       "src": "WTL.512x512.png",
