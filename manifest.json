@@ -3,7 +3,7 @@
   "dir": "ltr",
   "display": "standalone",
   "name": "Hello WonderTax® Labs",
-  "description": "App for WonderTax Labs public standards and guidelines as well as internal protected policies, practices, and procedures."
+  "description": "App for WonderTax Labs public standards and guidelines as well as internal protected policies, practices, and procedures.",
   "orientation": "any",
   "scope": "https://hello.wonder.tax",
   "short_name": "WonderTaxLabs",
