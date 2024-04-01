@@ -1,0 +1,28 @@
+{
+  "background_color": "#000000",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Hello WonderTax® Labs",
+  "orientation": "any",
+  "scope": "https://hello.wonder.tax/",
+  "short_name": "WonderTax Labs",
+  "start_url": "https://hello.wonder.tax/",
+  "theme_color": "#7eed47",
+  "icons": [
+    {
+      "src": "https://hello.wonder.tax/WTL.512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/WTL.512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "aa02f581-acf6-4bdc-af32-6312e5685355",
+  "lang": "en",
+  "categories": [
+    "business"
+  ]
+}
