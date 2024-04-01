@@ -17,10 +17,10 @@
       "purpose": "any"
     },
     {
-      "src": "/WTL.512x512.png",
+      "src": "WTL_maskable_icon_x512.png",
       "type": "image/png",
       "sizes": "48x48 72x72 96x96 128x128 102x192 384x384 512x512 682x682",
-      "purpose": "maskable" // <-- New property value `"maskable"`
+      "purpose": "maskable"
     }
   ],
   "id": "aa02f581-acf6-4bdc-af32-6312e5685355",
