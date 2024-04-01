@@ -1,12 +1,12 @@
 <html lang="en">
   <head>
     <title>WonderTax&reg; Labs</title>
-    <link rel="apple-touch-icon" href="/favicon.png"/>
-    <link rel="apple-touch-startup-image" href="/favicon.png"/>
+    <link rel="apple-touch-icon" href="/WTL.512x512.png"/>
+    <link rel="apple-touch-startup-image" href="/WTL.512x512.png"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="shortcut icon" type="image/png" href="https://hello.wonder.tax/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="https://hello.wonder.tax/WTL.512x512.png"/>
     <link rel="stylesheet" href="https://use.typekit.net/wxd6mxf.css"/>
     <style>
       @import "https://unpkg.com/open-props";
@@ -200,14 +200,30 @@
           "@type" : "Organization",
           "name": "WonderTax® Labs",
           "url": "https://wonder.tax",
-          "logo": "https://hello.wonder.tax/favicon.png"
+          "logo": "https://hello.wonder.tax/WTL.512x512.png"
+      }
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        // Register a service worker hosted at the root of the
+        // site using the default scope.
+        navigator.serviceWorker.register("/sw.js").then(
+          (registration) => {
+            console.log("Service worker registration succeeded:", registration);
+          },
+          (error) => {
+            console.error(`Service worker registration failed: ${error}`);
+          },
+        );
+      } else {
+        console.error("Service workers are not supported.");
       }
     </script>
   </head>
   <body>
     <div class="content">
       <div>
-        <img class="brand" src="https://hello.wonder.tax/favicon.png" title="WonderTax&reg;&nbsp;Labs"/>
+        <img class="brand" src="https://hello.wonder.tax/WTL.512x512.png" title="WonderTax&reg;&nbsp;Labs"/>
       </div>
       <div>
         <h1>WonderTax<sup>&reg;</sup> Labs</h1>
