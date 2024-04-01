@@ -3,7 +3,6 @@
  * and GitHub https://gist.github.com/cferdinandi/6e4a73a69b0ee30c158c8dd37d314663
  */
 // Core assets
-console.log("Service Worker Registered")
 let coreAssets = [
     '/assets/css/colorvars.css',
     '/WTL.512x512.png',
