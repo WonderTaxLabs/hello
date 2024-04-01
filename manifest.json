@@ -11,6 +11,7 @@
   "launch_handler": {
     "client_mode": ["focus-existing", "auto"]
   },
+  "prefer_related_applications": false,
   "scope_extensions": [
     {"origin": "*.wonder.tax"}
   ],
