@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>404</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wxd6mxf.css"/>
+    <style>
+      @import "https://unpkg.com/open-props";
+      @import "assets/css/colorvars.css";
+      
+      body {
+        background-color: var(--honeydew);
+        color: var(--jet);
+        font-family: stix-two-text, serif;
+        text-align: center;
+        padding: 2em;
+      }
+      a{
+        color: var(--asparagus);
+        text-decoration: none;
+      }
+      .card {
+        cursor: default;
+        background-color: var(--snow);
+        border-radius: var(--radius-3);
+        box-shadow: var(--shadow-1);
+        animation: var(--animation-fade-in);
+        transition: 0.3s;
+        &:hover {
+          box-shadow: var(--shadow-3);
+        }
+      }
+      @media (prefers-color-scheme: dark){
+        body{
+          background-color: var(--jet);
+          color: var(--honeydew);
+        }
+        a{
+          color: var(--sgbus-green);
+        }
+        .card{
+          background-color: #000000;
+          color: var(--snow);
+        }
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Offline</h1>
+    <div class="card">
+        Oh dear... the internet connection has failed us.
+    </div>
+  </body>
+</html>
