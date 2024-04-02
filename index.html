@@ -22,48 +22,11 @@
       }
       a{
         color: var(--asparagus);
-        text-decoration: none;
       }
       fieldset{
         margin:.5em;
         border-radius: var(--radius-3);
-      }
-      
-      /* Hover Animations class*/
-      .grow { 
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3 ease-in-out;
-        font-size: 1em; 
-        line-height: 1em;
-      }
-
-      .grow:hover { 
-        font-size: 1.1em;
-        line-height: 0.9em;
-      }
-      /* End Hover Animations class*/
-
-      .dark-light{
-        background-color: var(--jet);
-        color: var(--honeydew);
-      }
-      .content  {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        -webkit-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
-      }
-      .a-row{
-        display: flex;
-        flex-flow: row wrap;
-        width: 100%;
-        justify-content: space-around;
+        border: 1px solid #66964750;
       }
       div {
         margin:.25em;
@@ -87,6 +50,29 @@
         transition: all 0.5s ease-out allow-discrete;
         transition: 200ms linear 50ms;
       }
+      .dark-light{
+        background-color: var(--jet);
+        color: var(--honeydew);
+      }
+      .content  {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+      }
+      .a-row{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-around;
+      }
+
       @media screen and (min-width: 700px){
         .brand {
           height: 250px;
@@ -116,13 +102,14 @@
       }
       
       /*
-      tmep card style
+      temp card style
       via https://open-props.style/#getting-started
       @import "https://unpkg.com/open-props";
       */
       .card {
         cursor: default;
         background-color: var(--snow);
+        border: 1px solid #66964740;
         border-radius: var(--radius-3);
         box-shadow: var(--shadow-1);
         animation: var(--animation-fade-in);
@@ -224,7 +211,18 @@
   <body>
     <div class="content">
       <div>
-        <img class="brand" src="https://hello.wonder.tax/WTL.512x512.png" title="WonderTax&reg;&nbsp;Labs"/>
+        <picture>
+          <source
+            srcset="assets/WTL.512x512.dark.png"
+            media="(prefers-color-scheme: dark)"
+            class="brand"
+          />
+          <img
+            src="assets/WTL.512x512.png"
+            title="WonderTax&reg;&nbsp;Labs"
+            class="brand"
+          />
+        </picture>
       </div>
       <div>
         <h1>WonderTax<sup>&reg;</sup> Labs</h1>
@@ -236,14 +234,15 @@
         just a div in --jet.
       </div>
       <fieldset>
-        <label style="font-family: roc-grotesk-wide, sans-serif;">Brand Specification (Adobe Font: <a href="https://fonts.adobe.com/fonts/roc-grotesk" class="grow" target="_blank">Roc Grotesk Wide</a>)</label>
+        <label style="font-family: roc-grotesk-wide, sans-serif;">Brand Specification Adobe Font: <a href="https://fonts.adobe.com/fonts/roc-grotesk" target="_blank">Roc Grotesk Wide Medium</a></label>
         <br/>
-        body text Adobe Font: <a href="https://fonts.adobe.com/fonts/stix" class="grow" target="_blank">STIX-two-text</a>
+        body text Adobe Font: <a href="https://fonts.adobe.com/fonts/stix" target="_blank">STIX-two-text</a>
         <div class="a-row">
           <div style="background-color: var(--sgbus-green);" title="--sgbus-green">#7EED47 --sgbus-green</div>
           <div style="background-color: var(--asparagus);color: var(--snow);" title="--asparagus">#669647 --asparagus</div>
           <div style="background-color: var(--jet);color: var(--snow);border: 1px solid #66964740;" title="--jet">#323335 --jet</div>
-          <div style="background-color: var(--honeydew);border: 1px solid #66964740;" title="--honeydew">#D1E1D3 --honeydew</div>
+          <div style="background-color: var(--honeydew);border: 1px solid #66964740;" title="--honeydew">#E4F3E6 --honeydew</div>
+          <div style="background-color: var(--snow);border: 1px solid #66964740;" title="--snow">#F7F0F0 --snow</div>
         </div>
       </fieldset>
       <fieldset>
