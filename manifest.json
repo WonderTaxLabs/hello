@@ -15,6 +15,22 @@
   "scope_extensions": [
     {"origin": "*.wonder.tax"}
   ],
+  "screenshots" : [
+    {
+      "src": "assets/WTL-screenshot-portrait.png",
+      "sizes": "1170×2515",
+      "type": "image/png",
+      "form_factor": "portrait",
+      "label": "Hello WonderTax&reg; Labs"
+    },
+    {
+      "src": "assets/WTL-screenshot-wide.png",
+      "sizes": "2732×1160",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Hello WonderTax&reg; Labs"
+    }
+  ],
   "name": "Hello WonderTax® Labs",
   "description": "App for WonderTax Labs public standards and guidelines as well as internal protected policies, practices, and procedures.",
   "orientation": "any",
