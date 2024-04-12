@@ -1,5 +1,5 @@
-@import 'light-palette.css';
-@import 'dark-palette.css';
+@import 'assets/css/light-palette.css';
+@import 'assets/css/dark-palette.css';
 
 :root {
     color-scheme: light;
