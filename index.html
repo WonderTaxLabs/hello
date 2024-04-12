@@ -10,9 +10,158 @@
     <link rel="shortcut icon" type="image/png" href="/WTL_maskable_icon_x512.png"/>
     <link rel="icon" type="image/png" href="favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/wxd6mxf.css"/>
-    <link rel="stylesheet" href="./assets/css/colorvars.css"/>
     <style>
       @import "https://unpkg.com/open-props";
+      @import 'assets/css/light-palette.css';
+      @import 'assets/css/dark-palette.css';
+
+      :root {
+          /* default (light) colors */
+          /* color-scheme: light;*/
+          --primary: var(--m3-sys-light-primary); 
+          --on-primary: var(--m3-sys-light-on-primary); 
+          --primary-container: var(--m3-sys-light-primary-container); 
+          --on-primary-container: var(--m3-sys-light-on-primary-container); 
+          --primary-fixed: var(--m3-sys-light-primary-fixed); 
+          --on-primary-fixed: var(--m3-sys-light-on-primary-fixed); 
+          --primary-fixed-dim: var(--m3-sys-light-primary-fixed-dim); 
+          --on-primary-fixed-variant: var(--m3-sys-light-on-primary-fixed-variant);
+
+          --secondary: var(--m3-sys-light-secondary); 
+          --on-secondary: var(--m3-sys-light-on-secondary); 
+          --secondary-container: var(--m3-sys-light-secondary-container); 
+          --on-secondary-container: var(--m3-sys-light-on-secondary-container); 
+          --secondary-fixed: var(--m3-sys-light-secondary-fixed); 
+          --on-secondary-fixed: var(--m3-sys-light-on-secondary-fixed); 
+          --secondary-fixed-dim: var(--m3-sys-light-secondary-fixed-dim); 
+          --on-secondary-fixed-variant: var(--m3-sys-light-on-secondary-fixed-variant);
+
+          --tertiary: var(--m3-sys-light-tertiary); 
+          --on-tertiary: var(--m3-sys-light-on-tertiary); 
+          --tertiary-container: var(--m3-sys-light-tertiary-container); 
+          --on-tertiary-container: var(--m3-sys-light-on-tertiary-container); 
+          --tertiary-fixed: var(--m3-sys-light-tertiary-fixed); 
+          --on-tertiary-fixed: var(--m3-sys-light-on-tertiary-fixed); 
+          --tertiary-fixed-dim: var(--m3-sys-light-tertiary-fixed-dim); 
+          --on-tertiary-fixed-variant: var(--m3-sys-light-on-tertiary-fixed-variant); 
+
+          --error: var(--m3-sys-light-error); 
+          --on-error: var(--m3-sys-light-on-error); 
+          --error-container: var(--m3-sys-light-error-container); 
+          --on-error-container: var(--m3-sys-light-on-error-container);
+
+          --outline: var(--m3-sys-light-outline); 
+
+          --background: var(--m3-sys-light-background); 
+          --on-background: var(--m3-sys-light-on-background); 
+
+          --surface: var(--m3-sys-light-surface); 
+          --on-surface: var(--m3-sys-light-on-surface); 
+          --surface-variant: var(--m3-sys-light-surface-variant); 
+          --on-surface-variant: var(--m3-sys-light-on-surface-variant); 
+          --inverse-surface: var(--m3-sys-light-inverse-surface); 
+          --inverse-on-surface: var(--m3-sys-light-inverse-on-surface); 
+          --inverse-primary: var(--m3-sys-light-inverse-primary); 
+
+          --shadow: var(--m3-sys-light-shadow); 
+
+          --surface-tint: var(--m3-sys-light-surface-tint); 
+          --outline-variant: var(--m3-sys-light-outline-variant); 
+          --scrim: var(--m3-sys-light-scrim); 
+
+          --surface-container-highest: var(--m3-sys-light-surface-container-highest); 
+          --surface-container-high: var(--m3-sys-light-surface-container-high); 
+          --surface-container: var(--m3-sys-light-surface-container); 
+          --surface-container-low: var(--m3-sys-light-surface-container-low); 
+          --surface-container-lowest: var(--m3-sys-light-surface-container-lowest); 
+          --surface-bright: var(--m3-sys-light-surface-bright); 
+          --surface-dim: var(--m3-sys-light-surface-dim);
+          /*
+          --sgbus-green: #7eed47ff;
+          --asparagus: #669647ff;
+          --jet: #323335ff;
+          --honeydew: #E4F3E6ff;
+          --snow: #f7f0f0ff;
+          --sunglow: #ffc857ff;
+          /* accent options */
+          /*
+          --lavender: #d8e4ffff;
+          --non-photo-blue: #A3E7FCff;
+          --maya-blue: #78C3FBff;
+          --chefchaouen-blue: #5386E4ff;
+          --periwinkle: #B4ADEAff;
+          */
+      }
+
+      .wtl-bottle {
+        fill: var(--inverse-surface);
+      }
+      .wtl-inside {
+        fill: #7EDD47;
+      }
+
+      @media (prefers-color-scheme: dark){
+          :root {
+              /* color-scheme: dark; */
+              --primary: var(--m3-sys-dark-primary); 
+              --on-primary: var(--m3-sys-dark-on-primary); 
+              --primary-container: var(--m3-sys-dark-primary-container); 
+              --on-primary-container: var(--m3-sys-dark-on-primary-container); 
+              --primary-fixed: var(--m3-sys-dark-primary-fixed); 
+              --on-primary-fixed: var(--m3-sys-dark-on-primary-fixed); 
+              --primary-fixed-dim: var(--m3-sys-dark-primary-fixed-dim); 
+              --on-primary-fixed-variant: var(--m3-sys-dark-on-primary-fixed-variant);
+
+              --secondary: var(--m3-sys-dark-secondary); 
+              --on-secondary: var(--m3-sys-dark-on-secondary); 
+              --secondary-container: var(--m3-sys-dark-secondary-container); 
+              --on-secondary-container: var(--m3-sys-dark-on-secondary-container); 
+              --secondary-fixed: var(--m3-sys-dark-secondary-fixed); 
+              --on-secondary-fixed: var(--m3-sys-dark-on-secondary-fixed); 
+              --secondary-fixed-dim: var(--m3-sys-dark-secondary-fixed-dim); 
+              --on-secondary-fixed-variant: var(--m3-sys-dark-on-secondary-fixed-variant);
+
+              --tertiary: var(--m3-sys-dark-tertiary); 
+              --on-tertiary: var(--m3-sys-dark-on-tertiary); 
+              --tertiary-container: var(--m3-sys-dark-tertiary-container); 
+              --on-tertiary-container: var(--m3-sys-dark-on-tertiary-container); 
+              --tertiary-fixed: var(--m3-sys-dark-tertiary-fixed); 
+              --on-tertiary-fixed: var(--m3-sys-dark-on-tertiary-fixed); 
+              --tertiary-fixed-dim: var(--m3-sys-dark-tertiary-fixed-dim); 
+              --on-tertiary-fixed-variant: var(--m3-sys-dark-on-tertiary-fixed-variant); 
+
+              --error: var(--m3-sys-dark-error); 
+              --on-error: var(--m3-sys-dark-on-error); 
+              --error-container: var(--m3-sys-dark-error-container); 
+              --on-error-container: var(--m3-sys-dark-on-error-container); 
+              --outline: var(--m3-sys-dark-outline); 
+
+              --background: var(--m3-sys-dark-background); 
+              --on-background: var(--m3-sys-dark-on-background); 
+
+              --surface: var(--m3-sys-dark-surface); 
+              --on-surface: var(--m3-sys-dark-on-surface); 
+              --surface-variant: var(--m3-sys-dark-surface-variant); 
+              --on-surface-variant: var(--m3-sys-dark-on-surface-variant); 
+              --inverse-surface: var(--m3-sys-dark-inverse-surface); 
+              --inverse-on-surface: var(--m3-sys-dark-inverse-on-surface); 
+              --inverse-primary: var(--m3-sys-dark-inverse-primary); 
+
+              --shadow: var(--m3-sys-dark-shadow); 
+
+              --surface-tint: var(--m3-sys-dark-surface-tint); 
+              --outline-variant: var(--m3-sys-dark-outline-variant); 
+              --scrim: var(--m3-sys-dark-scrim); 
+              
+              --surface-container-highest: var(--m3-sys-dark-surface-container-highest); 
+              --surface-container-high: var(--m3-sys-dark-surface-container-high); 
+              --surface-container: var(--m3-sys-dark-surface-container); 
+              --surface-container-low: var(--m3-sys-dark-surface-container-low); 
+              --surface-container-lowest: var(--m3-sys-dark-surface-container-lowest); 
+              --surface-bright: var(--m3-sys-dark-surface-bright); 
+              --surface-dim: var(--m3-sys-dark-surface-dim);
+          }
+      }
       
       body {
         background-color: var(--background);
@@ -53,7 +202,7 @@
       }
       .dark-light{
         background-color: var(--inverse-surface);
-        color: var(--on-inverse-surface);
+        color: var(--inverse-on-surface);
       }
       .content  {
         position: relative;
@@ -111,7 +260,7 @@
         cursor: default;
         background-color: var(--surface);
         color: var(--on-surface);
-        border: 1px solid #66964740;
+        border: 1px solid var(--outline-variant);
         border-radius: var(--radius-3);
         box-shadow: var(--shadow);
         animation: var(--animation-fade-in);
@@ -269,18 +418,12 @@
   <body>
     <div class="content">
       <div>
-        <picture>
-          <source
-            srcset="assets/WTL.512x512.dark.png"
-            media="(prefers-color-scheme: dark)"
-            class="brand"
-          />
-          <img
-            src="assets/WTL.512x512.png"
-            title="WonderTax&reg;&nbsp;Labs"
-            class="brand"
-          />
-        </picture>
+        <a href="assets/wtl-brand-mark.svg" target="_blank">
+          <svg class="brand" id="WonderTax-Labs-brandmark" data-name="WonderTax-Labs-brandmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.02 403.69">
+            <path class="wtl-bottle" d="M303.5,120.91l36-62.44L238.27,0,202.2,62.46A172,172,0,0,0,23,145.79C-24.4,227.9,3.83,333.29,86,380.71A172,172,0,0,0,303.5,120.91Zm-200.34,230a137.62,137.62,0,0,1-.34-238.13l.18-.09a137.62,137.62,0,0,1,97.09-15.61l19.49,4.08L250.85,47l41.69,24.08L261.29,125.2l13.27,14.86a137.6,137.6,0,0,1-171.4,210.86Z"/>
+            <path class="wtl-inside" d="M143.46,339.78a107,107,0,0,0,130.4-73.42,53.5,53.5,0,0,1-102.7-29.91A53.5,53.5,0,0,0,67.81,208.74q-.28,1-.51,2A107,107,0,0,0,143.46,339.78Z"/>
+          </svg>
+        </a>
       </div>
       <div>
         <h1>WonderTax<sup>&reg;</sup> Labs</h1>
@@ -331,7 +474,7 @@
           <div style="background-color: var(--inverse-primary);color: var(--on-surface);" title="inverse-primary">inverse-primary</div>
         </div>
         <div class="a-row">
-          <div style="background-color: var(--surface-container-highest); color: var(--surface-container-highest)" title="surface-container-highest">surface-container-highest</div>
+          <div style="background-color: var(--surface-container-highest); color: var(--on-surface)" title="surface-container-highest">surface-container-highest</div>
           <div style="background-color: var(--surface-container-high); color: var(--on-surface)" title="surface-container-high">surface-container-high</div>
           <div style="background-color: var(--surface-container); color: var(--on-surface)" title="surface-container">surface-container</div>
           <div style="background-color: var(--surface-container-low); color: var(--on-surface)" title="surface-container-low">surface-container-low</div>
