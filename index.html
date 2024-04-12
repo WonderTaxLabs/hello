@@ -15,19 +15,19 @@
       @import "assets/css/colorvars.css";
       
       body {
-        background-color: var(--honeydew);
-        color: var(--jet);
+        background-color: var(--background);
+        color: var(--on-background);
         font-family: stix-two-text, serif;
         -webkit-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out;
       }
       a{
-        color: var(--asparagus);
+        color: --primary;
       }
       fieldset{
         margin:.5em;
         border-radius: var(--radius-3);
-        border: 1px solid #66964750;
+        border: 1px solid var(--outline);
       }
       div {
         margin:.25em;
@@ -52,8 +52,8 @@
         transition: 200ms linear 50ms;
       }
       .dark-light{
-        background-color: var(--jet);
-        color: var(--honeydew);
+        background-color: var(--inverse-surface);
+        color: var(--on-inverse-surface);
       }
       .content  {
         position: relative;
@@ -109,17 +109,19 @@
       */
       .card {
         cursor: default;
-        background-color: var(--snow);
+        background-color: var(--surface);
+        color: var(--on-surface);
         border: 1px solid #66964740;
         border-radius: var(--radius-3);
-        box-shadow: var(--shadow-1);
+        box-shadow: var(--shadow);
         animation: var(--animation-fade-in);
         transition: 0.3s;
         &:hover {
+          background-color: var(--surface-container-high);
           box-shadow: var(--shadow-3);
         }
       }
-
+      /*
       @media (prefers-color-scheme: dark){
         body{
           background-color: var(--jet);
@@ -140,6 +142,7 @@
           color: var(--jet);
         }
       }
+      */
 
       /* Portrait */
       @media screen and (orientation:portrait) and (max-width: 500px) {
@@ -283,32 +286,60 @@
         <h1>WonderTax<sup>&reg;</sup> Labs</h1>
       </div>
       <div class="card">
-        I am a card in --snow.
+        I am a card.
       </div>
       <div class="dark-light">
-        just a div in --jet.
+        just a div in.
       </div>
       <fieldset>
         <label style="font-family: roc-grotesk-wide, sans-serif;font-weight:500;">Brand Specification Adobe Font: <a href="https://fonts.adobe.com/fonts/roc-grotesk" target="_blank">Roc Grotesk Wide</a> Medium (font-weight: 500)</label>
         <br/>
         body text Adobe Font: <a href="https://fonts.adobe.com/fonts/stix" target="_blank">STIX-two-text</a>
         <div class="a-row">
-          <div style="background-color: var(--sgbus-green);" title="--sgbus-green">#7EED47 --sgbus-green</div>
-          <div style="background-color: var(--asparagus);color: var(--snow);" title="--asparagus">#669647 --asparagus</div>
-          <div style="background-color: var(--jet);color: var(--snow);border: 1px solid #66964740;" title="--jet">#323335 --jet</div>
-          <div style="background-color: var(--honeydew);border: 1px solid #66964740;" title="--honeydew">#E4F3E6 --honeydew</div>
-          <div style="background-color: var(--snow);border: 1px solid #66964740;" title="--snow">#F7F0F0 --snow</div>
+          <div style="background-color: var(--primary); color: var(--on-primary)" title="primary">primary</div>
+          <div style="background-color: var(--primary-container);color: var(--on-primary-container);" title="primary container">primary container</div>
+          <div style="background-color: var(--primary-fixed);color: var(--on-primary-fixed);" title="primary fixed">primary fixed</div>
+          <div style="background-color: var(--primary-fixed-dim);color: var(--on-primary-fixed-variant);" title="primary fixed dim">primary fixed dim</div>
         </div>
-      </fieldset>
-      <fieldset>
-        <label>Accent/Action color candidates (so far)</label>
         <div class="a-row">
-          <div style="background-color: var(--sunglow);" title="--sunglow">#FFC857 --sunglow</div>
-          <div style="background-color: var(--lavender);" title="--lavender">#D8E4FF --lavender</div>
-          <div style="background-color: var(--non-photo-blue);" title="--non-photo-blue">#A3E7FC --non-photo-blue</div>
-          <div style="background-color: var(--maya-blue);" title="--maya-blue">#78C3FB --maya-blue</div>
-          <div style="background-color: var(--chefchaouen-blue);" title="--chefchaouen-blue">#5386E --chefchaouen-blue</div>
-          <div style="background-color: var(--periwinkle);" title="--periwinkle">#B4ADEA --periwinkle</div>
+          <div style="background-color: var(--secondary); color: var(--on-secondary)" title="secondary">secondary</div>
+          <div style="background-color: var(--secondary-container);color: var(--on-secondary-container);" title="secondary container">secondary container</div>
+          <div style="background-color: var(--secondary-fixed);color: var(--on-secondary-fixed);" title="secondary fixed">secondary fixed</div>
+          <div style="background-color: var(--secondary-fixed-dim);color: var(--on-secondary-fixed-variant);" title="secondary fixed dim">secondary fixed dim</div>
+        </div>
+        <div class="a-row">
+          <div style="background-color: var(--tertiary); color: var(--on-tertiary)" title="tertiary">tertiary</div>
+          <div style="background-color: var(--tertiary-container);color: var(--on-tertiary-container);" title="tertiary container">tertiary container</div>
+          <div style="background-color: var(--tertiary-fixed);color: var(--on-tertiary-fixed);" title="tertiary fixed">tertiary fixed</div>
+          <div style="background-color: var(--tertiary-fixed-dim);color: var(--on-tertiary-fixed-variant);" title="tertiary fixed dim">tertiary fixed dim</div>
+        </div>
+        <div class="a-row">
+          <div style="background-color: var(--error); color: var(--on-error)" title="error">error</div>
+          <div style="background-color: var(--error-container);color: var(--on-error-container);" title="error-container">error-container</div>
+        </div>
+        <div class="a-row">
+          <div style="border: 1px solid var(--outline);" title="outline">outline</div>
+          <div style="border: 1px solid var(--outline-variant);" title="outline-variant">outline-variant</div>
+          <div style="background-color: var(--shadow); color: var(--outline-variant)" title="shadow">shadow</div>
+          <div style="background-color: var(--surface-tint); color: var(--on-surface)" title="surface-tint">surface-tint</div>
+          <div style="background-color: var(--scrim); color: var(--outline-variant)" title="scrim">scrim</div>
+        </div>
+        <div class="a-row">
+          <div style="background-color: var(--surface); color: var(--on-surface)" title="surface">surface</div>
+          <div style="background-color: var(--surface-variant);color: var(--on-surface-variant);" title="surface-variant">surface-variant</div>
+          <div style="background-color: var(--inverse-surface);color: var(--inverse-on-surface);" title="inverse-surface">inverse-surface</div>
+          <div style="background-color: var(--inverse-primary);color: var(--on-surface);" title="inverse-primary">inverse-primary</div>
+        </div>
+        <div class="a-row">
+          <div style="background-color: var(--surface-container-highest); color: var(--surface-container-highest)" title="surface-container-highest">surface-container-highest</div>
+          <div style="background-color: var(--surface-container-high); color: var(--on-surface)" title="surface-container-high">surface-container-high</div>
+          <div style="background-color: var(--surface-container); color: var(--on-surface)" title="surface-container">surface-container</div>
+          <div style="background-color: var(--surface-container-low); color: var(--on-surface)" title="surface-container-low">surface-container-low</div>
+          <div style="background-color: var(--surface-container-lowest); color: var(--on-surface)" title="surface-container-lowest">surface-container-lowest</div>
+        </div>
+        <div class="a-row">
+          <div style="background-color: var(--surface-bright); color: var(--on-surface)" title="surface-bright">surface-bright</div>
+          <div style="background-color: var(--surface-dim);color: var(--on-surface);" title="surface-dim">surface-dim</div>
         </div>
       </fieldset>
     </div>
