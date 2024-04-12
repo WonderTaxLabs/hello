@@ -2,65 +2,66 @@
 @import 'assets/css/dark-palette.css';
 
 :root {
-    color-scheme: light;
-    --primary: --m3-sys-light-primary; 
-    --on-primary: --m3-sys-light-on-primary; 
-    --primary-container: --m3-sys-light-primary-container; 
-    --on-primary-container: --m3-sys-light-on-primary-container; 
-    --primary-fixed: --m3-sys-light-primary-fixed; 
-    --on-primary-fixed: --m3-sys-light-on-primary-fixed; 
-    --primary-fixed-dim: --m3-sys-light-primary-fixed-dim; 
-    --on-primary-fixed-variant: --m3-sys-light-on-primary-fixed-variant;
+    /* default (light) colors */
+    /* color-scheme: light;*/
+    --primary: var(--m3-sys-light-primary); 
+    --on-primary: var(--m3-sys-light-on-primary); 
+    --primary-container: var(--m3-sys-light-primary-container); 
+    --on-primary-container: var(--m3-sys-light-on-primary-container); 
+    --primary-fixed: var(--m3-sys-light-primary-fixed); 
+    --on-primary-fixed: var(--m3-sys-light-on-primary-fixed); 
+    --primary-fixed-dim: var(--m3-sys-light-primary-fixed-dim); 
+    --on-primary-fixed-variant: var(--m3-sys-light-on-primary-fixed-variant);
 
-    --secondary: --m3-sys-light-secondary; 
-    --on-secondary: --m3-sys-light-on-secondary; 
-    --secondary-container: --m3-sys-light-secondary-container; 
-    --on-secondary-container: --m3-sys-light-on-secondary-container; 
-    --secondary-fixed: --m3-sys-light-secondary-fixed; 
-    --on-secondary-fixed: --m3-sys-light-on-secondary-fixed; 
-    --secondary-fixed-dim: --m3-sys-light-secondary-fixed-dim; 
-    --on-secondary-fixed-variant: --m3-sys-light-on-secondary-fixed-variant;
+    --secondary: var(--m3-sys-light-secondary); 
+    --on-secondary: var(--m3-sys-light-on-secondary); 
+    --secondary-container: var(--m3-sys-light-secondary-container); 
+    --on-secondary-container: var(--m3-sys-light-on-secondary-container); 
+    --secondary-fixed: var(--m3-sys-light-secondary-fixed); 
+    --on-secondary-fixed: var(--m3-sys-light-on-secondary-fixed); 
+    --secondary-fixed-dim: var(--m3-sys-light-secondary-fixed-dim); 
+    --on-secondary-fixed-variant: var(--m3-sys-light-on-secondary-fixed-variant);
 
-    --tertiary: --m3-sys-light-tertiary; 
-    --on-tertiary: --m3-sys-light-on-tertiary; 
-    --tertiary-container: --m3-sys-light-tertiary-container; 
-    --on-tertiary-container: --m3-sys-light-on-tertiary-container; 
-    --tertiary-fixed: --m3-sys-light-tertiary-fixed; 
-    --on-tertiary-fixed: --m3-sys-light-on-tertiary-fixed; 
-    --tertiary-fixed-dim: --m3-sys-light-tertiary-fixed-dim; 
-    --on-tertiary-fixed-variant: --m3-sys-light-on-tertiary-fixed-variant; 
+    --tertiary: var(--m3-sys-light-tertiary); 
+    --on-tertiary: var(--m3-sys-light-on-tertiary); 
+    --tertiary-container: var(--m3-sys-light-tertiary-container); 
+    --on-tertiary-container: var(--m3-sys-light-on-tertiary-container); 
+    --tertiary-fixed: var(--m3-sys-light-tertiary-fixed); 
+    --on-tertiary-fixed: var(--m3-sys-light-on-tertiary-fixed); 
+    --tertiary-fixed-dim: var(--m3-sys-light-tertiary-fixed-dim); 
+    --on-tertiary-fixed-variant: var(--m3-sys-light-on-tertiary-fixed-variant); 
 
-    --error: --m3-sys-light-error; 
-    --on-error: --m3-sys-light-on-error; 
-    --error-container: --m3-sys-light-error-container; 
-    --on-error-container: --m3-sys-light-on-error-container;
+    --error: var(--m3-sys-light-error); 
+    --on-error: var(--m3-sys-light-on-error); 
+    --error-container: var(--m3-sys-light-error-container); 
+    --on-error-container: var(--m3-sys-light-on-error-container);
 
-    --outline: --m3-sys-light-outline; 
+    --outline: var(--m3-sys-light-outline); 
 
-    --background: --m3-sys-light-background; 
-    --on-background: --m3-sys-light-on-background; 
+    --background: var(--m3-sys-light-background); 
+    --on-background: var(--m3-sys-light-on-background); 
 
-    --surface: --m3-sys-light-surface; 
-    --on-surface: --m3-sys-light-on-surface; 
-    --surface-variant: --m3-sys-light-surface-variant; 
-    --on-surface-variant: --m3-sys-light-on-surface-variant; 
-    --inverse-surface: --m3-sys-light-inverse-surface; 
-    --inverse-on-surface: --m3-sys-light-inverse-on-surface; 
-    --inverse-primary: --m3-sys-light-inverse-primary; 
+    --surface: var(--m3-sys-light-surface); 
+    --on-surface: var(--m3-sys-light-on-surface); 
+    --surface-variant: var(--m3-sys-light-surface-variant); 
+    --on-surface-variant: var(--m3-sys-light-on-surface-variant); 
+    --inverse-surface: var(--m3-sys-light-inverse-surface); 
+    --inverse-on-surface: var(--m3-sys-light-inverse-on-surface); 
+    --inverse-primary: var(--m3-sys-light-inverse-primary); 
 
-    --shadow: --m3-sys-light-shadow; 
+    --shadow: var(--m3-sys-light-shadow); 
 
-    --surface-tint: --m3-sys-light-surface-tint; 
-    --outline-variant: --m3-sys-light-outline-variant; 
-    --scrim: --m3-sys-light-scrim; 
+    --surface-tint: var(--m3-sys-light-surface-tint); 
+    --outline-variant: var(--m3-sys-light-outline-variant); 
+    --scrim: var(--m3-sys-light-scrim); 
 
-    --surface-container-highest: --m3-sys-light-surface-container-highest; 
-    --surface-container-high: --m3-sys-light-surface-container-high; 
-    --surface-container: --m3-sys-light-surface-container; 
-    --surface-container-low: --m3-sys-light-surface-container-low; 
-    --surface-container-lowest: --m3-sys-light-surface-container-lowest; 
-    --surface-bright: --m3-sys-light-surface-bright; 
-    --surface-dim: --m3-sys-light-surface-dim;
+    --surface-container-highest: var(--m3-sys-light-surface-container-highest); 
+    --surface-container-high: var(--m3-sys-light-surface-container-high); 
+    --surface-container: var(--m3-sys-light-surface-container); 
+    --surface-container-low: var(--m3-sys-light-surface-container-low); 
+    --surface-container-lowest: var(--m3-sys-light-surface-container-lowest); 
+    --surface-bright: var(--m3-sys-light-surface-bright); 
+    --surface-dim: var(--m3-sys-light-surface-dim);
     /*
     --sgbus-green: #7eed47ff;
     --asparagus: #669647ff;
@@ -77,65 +78,66 @@
     --periwinkle: #B4ADEAff;
     */
 }
+
 @media (prefers-color-scheme: dark){
     :root {
-        color-scheme: dark;
-        --primary: --m3-sys-dark-primary; 
-        --on-primary: --m3-sys-dark-on-primary; 
-        --primary-container: --m3-sys-dark-primary-container; 
-        --on-primary-container: --m3-sys-dark-on-primary-container; 
-        --primary-fixed: --m3-sys-dark-primary-fixed; 
-        --on-primary-fixed: --m3-sys-dark-on-primary-fixed; 
-        --primary-fixed-dim: --m3-sys-dark-primary-fixed-dim; 
-        --on-primary-fixed-variant: --m3-sys-dark-on-primary-fixed-variant;
+        /* color-scheme: dark; */
+        --primary: var(--m3-sys-dark-primary); 
+        --on-primary: var(--m3-sys-dark-on-primary); 
+        --primary-container: var(--m3-sys-dark-primary-container); 
+        --on-primary-container: var(--m3-sys-dark-on-primary-container); 
+        --primary-fixed: var(--m3-sys-dark-primary-fixed); 
+        --on-primary-fixed: var(--m3-sys-dark-on-primary-fixed); 
+        --primary-fixed-dim: var(--m3-sys-dark-primary-fixed-dim); 
+        --on-primary-fixed-variant: var(--m3-sys-dark-on-primary-fixed-variant);
 
-        --secondary: --m3-sys-dark-secondary; 
-        --on-secondary: --m3-sys-dark-on-secondary; 
-        --secondary-container: --m3-sys-dark-secondary-container; 
-        --on-secondary-container: --m3-sys-dark-on-secondary-container; 
-        --secondary-fixed: --m3-sys-dark-secondary-fixed; 
-        --on-secondary-fixed: --m3-sys-dark-on-secondary-fixed; 
-        --secondary-fixed-dim: --m3-sys-dark-secondary-fixed-dim; 
-        --on-secondary-fixed-variant: --m3-sys-dark-on-secondary-fixed-variant;
+        --secondary: var(--m3-sys-dark-secondary); 
+        --on-secondary: var(--m3-sys-dark-on-secondary); 
+        --secondary-container: var(--m3-sys-dark-secondary-container); 
+        --on-secondary-container: var(--m3-sys-dark-on-secondary-container); 
+        --secondary-fixed: var(--m3-sys-dark-secondary-fixed); 
+        --on-secondary-fixed: var(--m3-sys-dark-on-secondary-fixed); 
+        --secondary-fixed-dim: var(--m3-sys-dark-secondary-fixed-dim); 
+        --on-secondary-fixed-variant: var(--m3-sys-dark-on-secondary-fixed-variant);
 
-        --tertiary: --m3-sys-dark-tertiary; 
-        --on-tertiary: --m3-sys-dark-on-tertiary; 
-        --tertiary-container: --m3-sys-dark-tertiary-container; 
-        --on-tertiary-container: --m3-sys-dark-on-tertiary-container; 
-        --tertiary-fixed: --m3-sys-dark-tertiary-fixed; 
-        --on-tertiary-fixed: --m3-sys-dark-on-tertiary-fixed; 
-        --tertiary-fixed-dim: --m3-sys-dark-tertiary-fixed-dim; 
-        --on-tertiary-fixed-variant: --m3-sys-dark-on-tertiary-fixed-variant; 
+        --tertiary: var(--m3-sys-dark-tertiary); 
+        --on-tertiary: var(--m3-sys-dark-on-tertiary); 
+        --tertiary-container: var(--m3-sys-dark-tertiary-container); 
+        --on-tertiary-container: var(--m3-sys-dark-on-tertiary-container); 
+        --tertiary-fixed: var(--m3-sys-dark-tertiary-fixed); 
+        --on-tertiary-fixed: var(--m3-sys-dark-on-tertiary-fixed); 
+        --tertiary-fixed-dim: var(--m3-sys-dark-tertiary-fixed-dim); 
+        --on-tertiary-fixed-variant: var(--m3-sys-dark-on-tertiary-fixed-variant); 
 
-        --error: --m3-sys-dark-error; 
-        --on-error: --m3-sys-dark-on-error; 
-        --error-container: --m3-sys-dark-error-container; 
-        --on-error-container: --m3-sys-dark-on-error-container; 
-        --outline: --m3-sys-dark-outline; 
+        --error: var(--m3-sys-dark-error); 
+        --on-error: var(--m3-sys-dark-on-error); 
+        --error-container: var(--m3-sys-dark-error-container); 
+        --on-error-container: var(--m3-sys-dark-on-error-container); 
+        --outline: var(--m3-sys-dark-outline); 
 
-        --background: --m3-sys-dark-background; 
-        --on-background: --m3-sys-dark-on-background; 
+        --background: var(--m3-sys-dark-background); 
+        --on-background: var(--m3-sys-dark-on-background); 
 
-        --surface: --m3-sys-dark-surface; 
-        --on-surface: --m3-sys-dark-on-surface; 
-        --surface-variant: --m3-sys-dark-surface-variant; 
-        --on-surface-variant: --m3-sys-dark-on-surface-variant; 
-        --inverse-surface: --m3-sys-dark-inverse-surface; 
-        --inverse-on-surface: --m3-sys-dark-inverse-on-surface; 
-        --inverse-primary: --m3-sys-dark-inverse-primary; 
+        --surface: var(--m3-sys-dark-surface); 
+        --on-surface: var(--m3-sys-dark-on-surface); 
+        --surface-variant: var(--m3-sys-dark-surface-variant); 
+        --on-surface-variant: var(--m3-sys-dark-on-surface-variant); 
+        --inverse-surface: var(--m3-sys-dark-inverse-surface); 
+        --inverse-on-surface: var(--m3-sys-dark-inverse-on-surface); 
+        --inverse-primary: var(--m3-sys-dark-inverse-primary); 
 
-        --shadow: --m3-sys-dark-shadow; 
+        --shadow: var(--m3-sys-dark-shadow); 
 
-        --surface-tint: --m3-sys-dark-surface-tint; 
-        --outline-variant: --m3-sys-dark-outline-variant; 
-        --scrim: --m3-sys-dark-scrim; 
+        --surface-tint: var(--m3-sys-dark-surface-tint); 
+        --outline-variant: var(--m3-sys-dark-outline-variant); 
+        --scrim: var(--m3-sys-dark-scrim); 
         
-        --surface-container-highest: --m3-sys-dark-surface-container-highest; 
-        --surface-container-high: --m3-sys-dark-surface-container-high; 
-        --surface-container: --m3-sys-dark-surface-container; 
-        --surface-container-low: --m3-sys-dark-surface-container-low; 
-        --surface-container-lowest: --m3-sys-dark-surface-container-lowest; 
-        --surface-bright: --m3-sys-dark-surface-bright; 
-        --surface-dim: --m3-sys-dark-surface-dim;
+        --surface-container-highest: var(--m3-sys-dark-surface-container-highest); 
+        --surface-container-high: var(--m3-sys-dark-surface-container-high); 
+        --surface-container: var(--m3-sys-dark-surface-container); 
+        --surface-container-low: var(--m3-sys-dark-surface-container-low); 
+        --surface-container-lowest: var(--m3-sys-dark-surface-container-lowest); 
+        --surface-bright: var(--m3-sys-dark-surface-bright); 
+        --surface-dim: var(--m3-sys-dark-surface-dim);
     }
 }
