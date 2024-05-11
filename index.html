@@ -502,16 +502,16 @@
           "url": "https://wonder.tax",
           "logo": "https://hello.wonder.tax/WTL.512x512.png"
       }
-
-      var b = document.documentElement;
-              b.setAttribute('data-useragent',  navigator.userAgent);
-              b.setAttribute('data-platform', navigator.platform );
-              b.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
-      console.log(b);
-      console.log("data-useragent: " + b.data-useragent);
-      alert(b.data-useragent)
     </script>
     <script>
+      //browser user-gent sniffer
+      var b = document.documentElement;
+      b.setAttribute('data-useragent',  navigator.userAgent);
+      b.setAttribute('data-platform', navigator.platform );
+      console.log(b);
+      console.log("data-useragent: " + b.data-useragent);
+      alert(b.data-useragent);
+
       if ("serviceWorker" in navigator) {
         // Register a service worker hosted at the root of the
         // site using the default scope.
