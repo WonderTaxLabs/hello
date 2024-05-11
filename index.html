@@ -10,6 +10,17 @@
     <link rel="shortcut icon" type="image/png" href="/WTL_maskable_icon_x512.png"/>
     <link rel="icon" type="image/png" href="favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/wxd6mxf.css"/>
+    <script>
+      //browser user-gent sniffer
+      var c = navigator.userAgent;
+      var d = navigator.platform;
+      alert(c + "\n" + d);
+      if(navigator.userAgent.includes("SMART-TV")){
+        //force dark mode for smart TVs
+        document.documentElement.setAttribute('data-theme', 'dark');
+        alert("Did anything change?")
+      }
+    </script>
     <style>
       @import "https://unpkg.com/open-props";
       @import 'assets/css/light-palette.css';
@@ -588,19 +599,6 @@
       }
     </script>
     <script>
-      //browser user-gent sniffer
-      var c = navigator.userAgent;
-      var d = navigator.platform;
-
-      console.log("navigator.useragent: " + c);
-      console.log("navigator.platform: " + d);
-      alert(c + "\n" + d);
-      if(navigator.userAgent.includes("SMART-TV")){
-        //force dark mode for smart TVs
-        document.documentElement.setAttribute('data-theme', 'dark');
-        alert("Did anything change?")
-      }
-
       if ("serviceWorker" in navigator) {
         // Register a service worker hosted at the root of the
         // site using the default scope.
