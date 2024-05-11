@@ -228,8 +228,13 @@
         fill: #7EDD47;
       }
 
+      html[data-useragent*='BrowseHere'] body {
+        background-color: tan;
+      }
+      
       a {
         color: var(--tertiary);
+
       }
 
       @media (prefers-color-scheme: dark){
@@ -497,6 +502,14 @@
           "url": "https://wonder.tax",
           "logo": "https://hello.wonder.tax/WTL.512x512.png"
       }
+
+      var b = document.documentElement;
+              b.setAttribute('data-useragent',  navigator.userAgent);
+              b.setAttribute('data-platform', navigator.platform );
+              b.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
+      console.log(b);
+      console.log("data-useragent: " + b.data-useragent);
+      alert(b.data-useragent)
     </script>
     <script>
       if ("serviceWorker" in navigator) {
@@ -581,6 +594,7 @@
       </div>
       <div>
         <h1>WonderTax<sup>&reg;</sup> Labs</h1>
+
       </div>
       <div class="card">
         I am a "surface" card.
@@ -589,7 +603,9 @@
         I am an "inverse-surface" div.
       </div>
       <fieldset>
+
         <label style="font-family: roc-grotesk-wide, sans-serif;font-weight:600;">Brand Specification Adobe Font: <a href="https://fonts.adobe.com/fonts/roc-grotesk" target="_blank">Roc Grotesk Wide</a> Medium (font-weight: 600)</label>
+
         <br/>
         body text Adobe Font: <a href="https://fonts.adobe.com/fonts/stix" target="_blank">STIX-two-text</a>
         <div class="a-row primary-container">
