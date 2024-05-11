@@ -1,0 +1,10 @@
+
+# Our security address
+Contact: mailto:secops@wonder.tax
+
+# Canonical URI
+Canonical: https://hello.wonder.tax/.well-known/security.txt
+
+Preferred-Languages: en
+
+Expires: 2025-05-01T03:59:00.000Z
