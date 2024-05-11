@@ -237,6 +237,90 @@
 
       }
 
+      /* for Javascript theme changing */
+      [data-theme="dark"] {
+        :root {
+              /* color-scheme: dark; */
+              --primary: var(--m3-sys-dark-primary); 
+              --on-primary: var(--m3-sys-dark-on-primary); 
+              --primary-container: var(--m3-sys-dark-primary-container); 
+              --on-primary-container: var(--m3-sys-dark-on-primary-container); 
+              --primary-fixed: var(--m3-sys-dark-primary-fixed); 
+              --on-primary-fixed: var(--m3-sys-dark-on-primary-fixed); 
+              --primary-fixed-dim: var(--m3-sys-dark-primary-fixed-dim); 
+              --on-primary-fixed-variant: var(--m3-sys-dark-on-primary-fixed-variant);
+
+              --secondary: var(--m3-sys-dark-secondary); 
+              --on-secondary: var(--m3-sys-dark-on-secondary); 
+              --secondary-container: var(--m3-sys-dark-secondary-container); 
+              --on-secondary-container: var(--m3-sys-dark-on-secondary-container); 
+              --secondary-fixed: var(--m3-sys-dark-secondary-fixed); 
+              --on-secondary-fixed: var(--m3-sys-dark-on-secondary-fixed); 
+              --secondary-fixed-dim: var(--m3-sys-dark-secondary-fixed-dim); 
+              --on-secondary-fixed-variant: var(--m3-sys-dark-on-secondary-fixed-variant);
+
+              --tertiary: var(--m3-sys-dark-tertiary); 
+              --on-tertiary: var(--m3-sys-dark-on-tertiary); 
+              --tertiary-container: var(--m3-sys-dark-tertiary-container); 
+              --on-tertiary-container: var(--m3-sys-dark-on-tertiary-container); 
+              --tertiary-fixed: var(--m3-sys-dark-tertiary-fixed); 
+              --on-tertiary-fixed: var(--m3-sys-dark-on-tertiary-fixed); 
+              --tertiary-fixed-dim: var(--m3-sys-dark-tertiary-fixed-dim); 
+              --on-tertiary-fixed-variant: var(--m3-sys-dark-on-tertiary-fixed-variant); 
+
+              --error: var(--m3-sys-dark-error); 
+              --on-error: var(--m3-sys-dark-on-error); 
+              --error-container: var(--m3-sys-dark-error-container); 
+              --on-error-container: var(--m3-sys-dark-on-error-container); 
+              --outline: var(--m3-sys-dark-outline); 
+
+              --background: var(--m3-sys-dark-background); 
+              --on-background: var(--m3-sys-dark-on-background); 
+
+              --surface: var(--m3-sys-dark-surface); 
+              --on-surface: var(--m3-sys-dark-on-surface); 
+              --surface-variant: var(--m3-sys-dark-surface-variant); 
+              --on-surface-variant: var(--m3-sys-dark-on-surface-variant); 
+              --inverse-surface: var(--m3-sys-dark-inverse-surface); 
+              --inverse-on-surface: var(--m3-sys-dark-inverse-on-surface); 
+              --inverse-primary: var(--m3-sys-dark-inverse-primary); 
+
+              --shadow: var(--m3-sys-dark-shadow); 
+
+              --surface-tint: var(--m3-sys-dark-surface-tint); 
+              --outline-variant: var(--m3-sys-dark-outline-variant); 
+              --scrim: var(--m3-sys-dark-scrim); 
+              
+              --surface-container-highest: var(--m3-sys-dark-surface-container-highest); 
+              --surface-container-high: var(--m3-sys-dark-surface-container-high); 
+              --surface-container: var(--m3-sys-dark-surface-container); 
+              --surface-container-low: var(--m3-sys-dark-surface-container-low); 
+              --surface-container-lowest: var(--m3-sys-dark-surface-container-lowest); 
+              --surface-bright: var(--m3-sys-dark-surface-bright); 
+              --surface-dim: var(--m3-sys-dark-surface-dim);
+          }
+          
+        .surface-container-highest{
+          box-shadow: 0 19px 38px rgba(199, 238, 169,0.30), 0 15px 12px rgba(199, 238, 169,0.22);
+        }
+        .surface-container-high{
+          box-shadow: 0 14px 28px rgba(199, 238, 169,0.25), 0 10px 10px rgba(199, 238, 169,0.22);
+        }
+        .surface-container{
+          box-shadow: 0 10px 20px rgba(199, 238, 169,0.19), 0 6px 6px rgba(199, 238, 169,0.23);
+        }
+        .surface-container-low{
+          box-shadow: 0 3px 6px rgba(199, 238, 169,0.16), 0 3px 6px rgba(199, 238, 169,0.23);
+        }
+        .surface-container-lowest{
+          box-shadow: 0 1px 3px rgba(199, 238, 169,0.12), 0 1px 2px rgba(199, 238, 169,0.24);
+        }
+        a {
+          color: var(--on-primary-container);
+        }
+      }
+
+      /* normal media theme detection */
       @media (prefers-color-scheme: dark){
           :root {
               /* color-scheme: dark; */
