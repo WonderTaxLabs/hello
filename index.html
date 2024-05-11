@@ -228,6 +228,10 @@
         fill: #7EDD47;
       }
 
+      html[data-useragent*='BrowseHere'] body {
+        background-color: tan;
+      }
+
       @media (prefers-color-scheme: dark){
           :root {
               /* color-scheme: dark; */
@@ -290,21 +294,21 @@
               --surface-dim: var(--m3-sys-dark-surface-dim);
           }
           
-      .surface-container-highest{
-        box-shadow: 0 19px 38px rgba(199, 238, 169,0.30), 0 15px 12px rgba(199, 238, 169,0.22);
-      }
-      .surface-container-high{
-        box-shadow: 0 14px 28px rgba(199, 238, 169,0.25), 0 10px 10px rgba(199, 238, 169,0.22);
-      }
-      .surface-container{
-        box-shadow: 0 10px 20px rgba(199, 238, 169,0.19), 0 6px 6px rgba(199, 238, 169,0.23);
-      }
-      .surface-container-low{
-        box-shadow: 0 3px 6px rgba(199, 238, 169,0.16), 0 3px 6px rgba(199, 238, 169,0.23);
-      }
-      .surface-container-lowest{
-        box-shadow: 0 1px 3px rgba(199, 238, 169,0.12), 0 1px 2px rgba(199, 238, 169,0.24);
-      }
+        .surface-container-highest{
+          box-shadow: 0 19px 38px rgba(199, 238, 169,0.30), 0 15px 12px rgba(199, 238, 169,0.22);
+        }
+        .surface-container-high{
+          box-shadow: 0 14px 28px rgba(199, 238, 169,0.25), 0 10px 10px rgba(199, 238, 169,0.22);
+        }
+        .surface-container{
+          box-shadow: 0 10px 20px rgba(199, 238, 169,0.19), 0 6px 6px rgba(199, 238, 169,0.23);
+        }
+        .surface-container-low{
+          box-shadow: 0 3px 6px rgba(199, 238, 169,0.16), 0 3px 6px rgba(199, 238, 169,0.23);
+        }
+        .surface-container-lowest{
+          box-shadow: 0 1px 3px rgba(199, 238, 169,0.12), 0 1px 2px rgba(199, 238, 169,0.24);
+        }
       }
       
       body {
@@ -489,6 +493,14 @@
           "url": "https://wonder.tax",
           "logo": "https://hello.wonder.tax/WTL.512x512.png"
       }
+
+      var b = document.documentElement;
+              b.setAttribute('data-useragent',  navigator.userAgent);
+              b.setAttribute('data-platform', navigator.platform );
+              b.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
+      console.log(b);
+      console.log("data-useragent: " + b.data-useragent);
+      alert(b.data-useragent)
     </script>
     <script>
       if ("serviceWorker" in navigator) {
@@ -573,6 +585,7 @@
       </div>
       <div>
         <h1>WonderTax<sup>&reg;</sup> Labs</h1>
+
       </div>
       <div class="card">
         I am a card.
@@ -581,7 +594,7 @@
         just a div in.
       </div>
       <fieldset>
-        <label style="font-family: roc-grotesk-wide, sans-serif;font-weight:500;">Brand Specification Adobe Font: <a href="https://fonts.adobe.com/fonts/roc-grotesk" target="_blank">Roc Grotesk Wide</a> Medium (font-weight: 500)</label>
+        <label style="font-family: roc-grotesk-wide, sans-serif;font-weight:600;">Brand Specification Adobe Font: <a href="https://fonts.adobe.com/fonts/roc-grotesk" target="_blank">Roc Grotesk Wide</a> Medium (font-weight: 500)</label>
         <br/>
         body text Adobe Font: <a href="https://fonts.adobe.com/fonts/stix" target="_blank">STIX-two-text</a>
         <div class="a-row primary-container">
