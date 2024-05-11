@@ -511,6 +511,10 @@
       console.log("navigator.useragent: " + c);
       console.log("navigator.platform: " + d);
       alert(c + "\n" + d);
+      if(navigator.userAgent.includes("SMART-TV")){
+        //force dark mode for smart TVs
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
 
       if ("serviceWorker" in navigator) {
         // Register a service worker hosted at the root of the
