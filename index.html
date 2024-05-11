@@ -505,12 +505,12 @@
     </script>
     <script>
       //browser user-gent sniffer
-      var b = document.documentElement;
-      b.setAttribute('data-useragent',  navigator.userAgent);
-      b.setAttribute('data-platform', navigator.platform );
-      console.log(b);
-      console.log("data-useragent: " + b.data-useragent);
-      alert(b.data-useragent);
+      var c = navigator.userAgent;
+      var d = navigator.platform;
+
+      console.log("navigator.useragent: " + c);
+      console.log("navigator.platform: " + d);
+      alert(c + "\n" + d);
 
       if ("serviceWorker" in navigator) {
         // Register a service worker hosted at the root of the
