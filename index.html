@@ -473,28 +473,15 @@
         -webkit-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out;
       }
-      .a-row{
-        display: flex;
-        flex-flow: row wrap;
-        padding:.05rem;
-        margin: 1rem 0;
-        width: 100%;
-        justify-content: space-evenly;
-      }
 
       @media screen and (min-width: 700px){
         .brand {
-          height: 200px;
           width: 500px;
-        }
-        h1{
-          font-size: 2em;
         }
       }
       @media screen and (min-width: 1064px){
        .brand {
-          height: 300px;
-          width: 750px;
+          width: 800px;
         }
       }
       @media screen and (min-width: 1400px){
@@ -502,7 +489,17 @@
           width: 1200px;
         }
       }
+      @media screen and (min-width: 1600px){
+       .brand {
+          width: 1400px;
+        }
+      }
       
+      @media screen and (min-width: 1800px){
+       .brand {
+          width: 1600px;
+        }
+      }
       @media (prefers-color-scheme: dark){
         body{
           background-color: var(--jet);
@@ -633,6 +630,7 @@
             </g>
           </g>
         </svg>
+        <small>&copy;2024 by WonderTax Labs. WonderTax<sup>&reg;</sup> is a registered trademark of WonderTax Labs LLC</small>
       </div>
     </div>
   </body>
