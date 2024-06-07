@@ -97,13 +97,9 @@
         fill: var(--brand-primary);
       }
 
-      html[data-useragent*='BrowseHere'] body {
-        background-color: tan;
-      }
       
       a {
         color: var(--tertiary);
-
       }
 
       /* for Javascript theme changing */
@@ -167,70 +163,74 @@
         --surface-container-lowest: var(--m3-sys-dark-surface-container-lowest); 
         --surface-bright: var(--m3-sys-dark-surface-bright); 
         --surface-dim: var(--m3-sys-dark-surface-dim);
+        
+        .wtl-bottle {
+          fill: #f8faf0; /* BAD: force - down know why var(--brand-secondary) isn't working */
+        }
       }
 
       /* normal media theme detection */
       @media (prefers-color-scheme: dark){
         :root {
-            /* color-scheme: dark; */
-            --brand-secondary: var(--brand-secondary);
-            --primary: var(--m3-sys-dark-primary); 
-            --on-primary: var(--m3-sys-dark-on-primary); 
-            --primary-container: var(--m3-sys-dark-primary-container); 
-            --on-primary-container: var(--m3-sys-dark-on-primary-container); 
-            --primary-fixed: var(--m3-sys-dark-primary-fixed); 
-            --on-primary-fixed: var(--m3-sys-dark-on-primary-fixed); 
-            --primary-fixed-dim: var(--m3-sys-dark-primary-fixed-dim); 
-            --on-primary-fixed-variant: var(--m3-sys-dark-on-primary-fixed-variant);
+          /* color-scheme: dark; */
+          --brand-secondary: var(--brand-secondary);
+          --primary: var(--m3-sys-dark-primary); 
+          --on-primary: var(--m3-sys-dark-on-primary); 
+          --primary-container: var(--m3-sys-dark-primary-container); 
+          --on-primary-container: var(--m3-sys-dark-on-primary-container); 
+          --primary-fixed: var(--m3-sys-dark-primary-fixed); 
+          --on-primary-fixed: var(--m3-sys-dark-on-primary-fixed); 
+          --primary-fixed-dim: var(--m3-sys-dark-primary-fixed-dim); 
+          --on-primary-fixed-variant: var(--m3-sys-dark-on-primary-fixed-variant);
 
-            --secondary: var(--m3-sys-dark-secondary); 
-            --on-secondary: var(--m3-sys-dark-on-secondary); 
-            --secondary-container: var(--m3-sys-dark-secondary-container); 
-            --on-secondary-container: var(--m3-sys-dark-on-secondary-container); 
-            --secondary-fixed: var(--m3-sys-dark-secondary-fixed); 
-            --on-secondary-fixed: var(--m3-sys-dark-on-secondary-fixed); 
-            --secondary-fixed-dim: var(--m3-sys-dark-secondary-fixed-dim); 
-            --on-secondary-fixed-variant: var(--m3-sys-dark-on-secondary-fixed-variant);
+          --secondary: var(--m3-sys-dark-secondary); 
+          --on-secondary: var(--m3-sys-dark-on-secondary); 
+          --secondary-container: var(--m3-sys-dark-secondary-container); 
+          --on-secondary-container: var(--m3-sys-dark-on-secondary-container); 
+          --secondary-fixed: var(--m3-sys-dark-secondary-fixed); 
+          --on-secondary-fixed: var(--m3-sys-dark-on-secondary-fixed); 
+          --secondary-fixed-dim: var(--m3-sys-dark-secondary-fixed-dim); 
+          --on-secondary-fixed-variant: var(--m3-sys-dark-on-secondary-fixed-variant);
 
-            --tertiary: var(--m3-sys-dark-tertiary); 
-            --on-tertiary: var(--m3-sys-dark-on-tertiary); 
-            --tertiary-container: var(--m3-sys-dark-tertiary-container); 
-            --on-tertiary-container: var(--m3-sys-dark-on-tertiary-container); 
-            --tertiary-fixed: var(--m3-sys-dark-tertiary-fixed); 
-            --on-tertiary-fixed: var(--m3-sys-dark-on-tertiary-fixed); 
-            --tertiary-fixed-dim: var(--m3-sys-dark-tertiary-fixed-dim); 
-            --on-tertiary-fixed-variant: var(--m3-sys-dark-on-tertiary-fixed-variant); 
+          --tertiary: var(--m3-sys-dark-tertiary); 
+          --on-tertiary: var(--m3-sys-dark-on-tertiary); 
+          --tertiary-container: var(--m3-sys-dark-tertiary-container); 
+          --on-tertiary-container: var(--m3-sys-dark-on-tertiary-container); 
+          --tertiary-fixed: var(--m3-sys-dark-tertiary-fixed); 
+          --on-tertiary-fixed: var(--m3-sys-dark-on-tertiary-fixed); 
+          --tertiary-fixed-dim: var(--m3-sys-dark-tertiary-fixed-dim); 
+          --on-tertiary-fixed-variant: var(--m3-sys-dark-on-tertiary-fixed-variant); 
 
-            --error: var(--m3-sys-dark-error); 
-            --on-error: var(--m3-sys-dark-on-error); 
-            --error-container: var(--m3-sys-dark-error-container); 
-            --on-error-container: var(--m3-sys-dark-on-error-container); 
-            --outline: var(--m3-sys-dark-outline); 
+          --error: var(--m3-sys-dark-error); 
+          --on-error: var(--m3-sys-dark-on-error); 
+          --error-container: var(--m3-sys-dark-error-container); 
+          --on-error-container: var(--m3-sys-dark-on-error-container); 
+          --outline: var(--m3-sys-dark-outline); 
 
-            --background: var(--m3-sys-dark-background); 
-            --on-background: var(--m3-sys-dark-on-background); 
+          --background: var(--m3-sys-dark-background); 
+          --on-background: var(--m3-sys-dark-on-background); 
 
-            --surface: var(--m3-sys-dark-surface); 
-            --on-surface: var(--m3-sys-dark-on-surface); 
-            --surface-variant: var(--m3-sys-dark-surface-variant); 
-            --on-surface-variant: var(--m3-sys-dark-on-surface-variant); 
-            --inverse-surface: var(--m3-sys-dark-inverse-surface); 
-            --inverse-on-surface: var(--m3-sys-dark-inverse-on-surface); 
-            --inverse-primary: var(--m3-sys-dark-inverse-primary); 
+          --surface: var(--m3-sys-dark-surface); 
+          --on-surface: var(--m3-sys-dark-on-surface); 
+          --surface-variant: var(--m3-sys-dark-surface-variant); 
+          --on-surface-variant: var(--m3-sys-dark-on-surface-variant); 
+          --inverse-surface: var(--m3-sys-dark-inverse-surface); 
+          --inverse-on-surface: var(--m3-sys-dark-inverse-on-surface); 
+          --inverse-primary: var(--m3-sys-dark-inverse-primary); 
 
-            --shadow: var(--m3-sys-dark-shadow); 
+          --shadow: var(--m3-sys-dark-shadow); 
 
-            --surface-tint: var(--m3-sys-dark-surface-tint); 
-            --outline-variant: var(--m3-sys-dark-outline-variant); 
-            --scrim: var(--m3-sys-dark-scrim); 
-            
-            --surface-container-highest: var(--m3-sys-dark-surface-container-highest); 
-            --surface-container-high: var(--m3-sys-dark-surface-container-high); 
-            --surface-container: var(--m3-sys-dark-surface-container); 
-            --surface-container-low: var(--m3-sys-dark-surface-container-low); 
-            --surface-container-lowest: var(--m3-sys-dark-surface-container-lowest); 
-            --surface-bright: var(--m3-sys-dark-surface-bright); 
-            --surface-dim: var(--m3-sys-dark-surface-dim);
+          --surface-tint: var(--m3-sys-dark-surface-tint); 
+          --outline-variant: var(--m3-sys-dark-outline-variant); 
+          --scrim: var(--m3-sys-dark-scrim); 
+          
+          --surface-container-highest: var(--m3-sys-dark-surface-container-highest); 
+          --surface-container-high: var(--m3-sys-dark-surface-container-high); 
+          --surface-container: var(--m3-sys-dark-surface-container); 
+          --surface-container-low: var(--m3-sys-dark-surface-container-low); 
+          --surface-container-lowest: var(--m3-sys-dark-surface-container-lowest); 
+          --surface-bright: var(--m3-sys-dark-surface-bright); 
+          --surface-dim: var(--m3-sys-dark-surface-dim);
         }     
         .wtl-bottle {
           fill: #f8faf0; /* BAD: force - down know why var(--brand-secondary) isn't working */
@@ -246,15 +246,18 @@
         letter-spacing: .03em; -webkit-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out;
       }
+      
       a{
         color: --primary;
       }
+      
       .brand {
         height: 200px;
         width: 200px;
         transition: all 0.5s ease-out allow-discrete;
         transition: 200ms linear 50ms;
       }
+      
       .content  {
         position: relative;
         top: 50%;
@@ -294,24 +297,11 @@
           width: 1600px;
         }
       }
+      
       @media (prefers-color-scheme: dark){
         body{
           background-color: var(--jet);
           color: var(--honeydew);
-        }
-        a{
-          color: var(--sgbus-green);
-        }
-        .dark-light{
-          background-color: var(--honeydew);
-          color: var(--jet);
-        }
-        .card{
-          background-color: #000000;
-          color: var(--snow);
-        }
-        .a-row div{
-          color: var(--jet);
         }
       }
     </style>
