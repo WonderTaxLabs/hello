@@ -1,4 +1,6 @@
 :root {
+    --brand-primary: #7EDD47;
+    --brand-secondary: #323335;
     --m3-sys-light-primary: #446732; 
     --m3-sys-light-on-primary: #ffffff; 
     --m3-sys-light-primary-container: #c5efab; 
