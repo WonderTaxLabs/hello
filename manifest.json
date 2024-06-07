@@ -28,16 +28,16 @@
       "sizes": "2732×1160",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Hello WonderTax&reg; Labs"
+      "label": "WonderTax&reg; Labs"
     }
   ],
   "related_applications": [],
-  "name": "Hello WonderTax® Labs",
-  "description": "App for WonderTax Labs public standards and guidelines as well as internal protected policies, practices, and procedures.",
+  "name": "WonderTax® Labs",
+  "description": "WonderTax Labs.",
   "orientation": "any",
-  "scope": "https://hello.wonder.tax",
+  "scope": "https://wonder.tax",
   "short_name": "WonderTaxLabs",
-  "start_url": "https://hello.wonder.tax",
+  "start_url": "https://wonder.tax",
   "theme_color": "#323335",
   "icons": [
     {
