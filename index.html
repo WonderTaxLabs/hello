@@ -21,7 +21,6 @@
         //alert user agent and screen props
         document.documentElement.setAttribute('data-useragent',  "SMART-TV");
         //alert("User Agent: " + navigator.userAgent + "/nScreen Width: " + window.innerWidth + "/n Screen Height: " + window.innerHeight)
-        document.documentElement.setAttribute('data-brand-width',  window.innerWidth * .9);
       }
     </script>
     <style>
@@ -265,7 +264,8 @@
       }
       
       .brand {
-        width: 200px;
+        /*width: 200px;*/
+        width: calc(95vw);
         transition: all 0.5s ease-out allow-discrete;
         transition: 200ms linear 50ms;
       }
