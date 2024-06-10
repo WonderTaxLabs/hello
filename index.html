@@ -18,6 +18,8 @@
       if(navigator.userAgent.includes("SMART-TV")){
         //force dark mode for smart TVs
         document.documentElement.setAttribute('data-theme', 'dark');
+        //alert user agent and screen props
+        alert("User Agent: " + navigator.userAgent + "/nScreen Width: " + window.innerWidth + "/n Screen Height: " + window.innerHeight)
       }
     </script>
     <style>
