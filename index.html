@@ -11,14 +11,13 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://use.typekit.net/wxd6mxf.css"/>
     <script>
-      //browser user-gent sniffer
+      //browser user-agent sniffer
       var c = navigator.userAgent;
       var d = navigator.platform;
       //alert(c + "\n" + d);
       if(navigator.userAgent.includes("SMART-TV")){
         //force dark mode for smart TVs
         document.documentElement.setAttribute('data-theme', 'dark');
-        //alert("Did anything change?")
       }
     </script>
     <style>
@@ -96,7 +95,6 @@
       .wtl-inside {
         fill: var(--brand-primary);
       }
-
       
       a {
         color: var(--tertiary);
@@ -266,6 +264,11 @@
         width: 200px;
         transition: all 0.5s ease-out allow-discrete;
         transition: 200ms linear 50ms;
+      }
+      
+      /*make logo bigger for 'SMART_TV'*/
+      html[data-useragent*='SMART-TV'] .brand {
+        width: 400px;
       }
       
       .content  {
