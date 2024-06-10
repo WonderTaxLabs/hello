@@ -19,6 +19,7 @@
         //force dark mode for smart TVs
         document.documentElement.setAttribute('data-theme', 'dark');
         //alert user agent and screen props
+        document.documentElement.setAttribute('data-useragent',  "SMART-TV");
         alert("User Agent: " + navigator.userAgent + "/nScreen Width: " + window.innerWidth + "/n Screen Height: " + window.innerHeight)
       }
     </script>
@@ -269,8 +270,8 @@
       }
       
       /*make logo bigger for 'SMART_TV'*/
-      html[data-useragent*'SMART-TV'] .brand {
-        width: 1200px;
+      html[data-useragent='SMART-TV'] .brand {
+        width: 1800px;
       }
       
       .content  {
