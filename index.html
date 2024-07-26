@@ -385,11 +385,11 @@
             });
           },
           (error) => {
-            console.error(`Service worker registration failed: ${error}`);
+            console.log(`Service worker registration failed: ${error}`);
           },
         );
       } else {
-        console.error("Service workers are not supported.");
+        console.log("Service workers are not supported.");
       }
     </script>
   </head>
