@@ -1,0 +1,22 @@
+name: Automagic PR Slack Messanger
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  notify:
+    name: PR notification
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Post message
+        uses: slackapi/slack-github-action@v1.25.0
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          payload: |
+            {
+              "title": ${{ toJson(github.event.pull_request.title) }},
+              "author": ${{ toJson(github.triggering_actor) }},
+              "link": ${{ toJson(github.event.pull_request.html_url) }}
+            }
