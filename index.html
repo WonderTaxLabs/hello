@@ -347,7 +347,7 @@
             const offlineFallbackPage = "offline.html";
             
             self.addEventListener("message", (event) => {
-              const trustedOrigin = 'https://www.example.com';
+              const trustedOrigin = 'https://wonder.tax';
               if (event.origin === trustedOrigin && event.data && event.data.type === "SKIP_WAITING") {
                 self.skipWaiting();
               }
