@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>cookies.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="cookie-policy">Cookie Policy</h1>
+<p>Effective January 1, 2025</p>
+<p>This policy describes how WonderTax Labs and its affiliates (collectively, &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) and trusted third parties uses cookies and other similar technologies, on our website at <a href="https://wonder.tax">https://wonder.tax</a> (the &quot;Website&quot;), as well as your preferences and choices related to those technologies. The purpose of this Policy is to provide you with information about what cookies are and how they work. It also explains what cookies we use, what they do and how you can control what cookies we use when you visit our website.</p>
+<h2 id="1-our-website">1. Our Website</h2>
+<p>This Policy only relates to your use of our Website. Throughout our Website we may link to other websites owned and operated by certain trusted third parties to service advertisements or provide analytical services. These third-party websites may also use cookies or similar technologies in accordance with their own separate policies. For privacy information relating to these other third-party websites, please consult their policies as appropriate.</p>
+<h2 id="2-what-are-cookies">2. What Are Cookies?</h2>
+<p>Cookies are small data files that are stored on your browser or device when you visit our website. Cookies generally contain information such as website preferences, user settings, and browsing history. They help us recognize you and remember things about your device so your interaction with our Website is easy and meaningful.</p>
+<p>Cookies may be served by us (&quot;first-party cookies&quot;) or trusted third parties (&quot;third-party cookies&quot;). For example, we use first-party cookies to remember your settings and preferences, such as language and location. We may also use third-party cookies, like Google and Adobe Analytics to help us understand how you are interacting with our Website so that we can improve it.</p>
+<p>We also use similar technologies, also called pixels, which are small images on a web page or in an email. These technologies help us to:</p>
+<ul>
+<li>Track and understand how you use and interact with our Website;</li>
+<li>Tailor our Website to your preferences;</li>
+<li>Measure the effectiveness of our promotions and advertisements on third-party websites; and</li>
+<li>Otherwise manage and enhance our Website.</li>
+</ul>
+<h2 id="how-we-use-cookies">How We Use Cookies</h2>
+<p>Cookies play an important role in helping us provide an effective and safe Website. For example, we use these technologies to help us determine the popularity of certain content, improving our Website and user experience, and to better understand your online activity. The cookies we use are grouped by the cookie types below and generally fall into one or more of the following categories:</p>
+<p><strong>Strictly Necessary</strong>
+These cookies are necessary for our Website to function. They are usually only set in response to actions made by you such as a request for services, setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personal data.</p>
+<p><strong>Performance</strong>
+These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our Website. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our Website and will not be able to monitor its performance.</p>
+<p><strong>Targeting</strong>
+These cookies may be set through our Website by us and our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant advertisements on other sites. If you do not allow these cookies, you will experience less targeted advertising.</p>
+<p>As described above, we partner with Microsoft Advertising, among other trusted third parties, to provide advertising and analytical services. For more information about how Microsoft collects and uses personal information, please see the <a href="https://privacy.microsoft.com/en-us/privacystatement">Microsoft Privacy Statement</a>.</p>
+<h2 id="3-your-choices">3. Your Choices</h2>
+<p>Apart from &quot;Strictly Necessary&quot; cookies that are necessary for the functioning of our Website, you can choose whether to accept cookies through our Cookie Preference Center by clicking the &quot;Privacy Settings&quot; button above. Since cookies can be an important part of how our Website works, if you remove or reject cookies, you may lose some of the functionality of our Website.</p>
+<h2 id="4-your-browser-settings">4. Your Browser Settings</h2>
+<p>Your browser includes controls that allow you to manage the use of cookies by the websites that you visit. Most browsers have features that enable you to see and delete cookies stored on your device and to block cookies from all or selected websites.</p>
+<p>Your browser may be initially set to accept cookies, but you can change your settings to notify you when a cookie is being set or updated, or to block cookies altogether.</p>
+<p>Please note that by blocking any or all cookies you may not have access to certain available features, content, or personalization.</p>
+<p>Please refer to your browser settings for more information.</p>
+<h2 id="5-changes-to-this-policy">5. Changes To This Policy</h2>
+<p>We may update or change the technologies we use from time to time. The most up-to-date version of this Policy will be posted on this page and if we make any changes, we will update the effective date at the top of the Policy.</p>
+<h2 id="6-contacting-us">6. Contacting Us</h2>
+<p>If you have any questions about our use of cookies or this Policy, please contact us at <a href="mailto:dataprivacy@wonder.tax">dataprivacy@wonder.tax</a>.</p>
+
+</body>
+</html>
